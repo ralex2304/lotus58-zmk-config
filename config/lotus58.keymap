@@ -16,127 +16,31 @@
         compatible = "zmk,combos";
 
         misc_layer_combo {
-            bindings = <&hold_tap_layer 2 2>;
-            key-positions = <57 56>;
+            bindings = <&hold_tap_layer 3 3>;
+            key-positions = <57 54>;
             layers = <0>;
         };
 
         del_combo {
             bindings = <&kp DELETE>;
-            key-positions = <59 58>;
-            layers = <0>;
-        };
-
-        ctrl_enter_combo {
-            bindings = <&kp LC(ENTER)>;
-            key-positions = <55 54>;
-            layers = <0>;
+            key-positions = <55 56>;
+            layers = <0 1 2>;
         };
 
         game_layer_enable_combo {
-            bindings = <&to 3>;
-            key-positions = <55 56>;
-            layers = <1>;
+            bindings = <&to 4>;
+            key-positions = <54 57>;
+            layers = <3>;
         };
 
         game_layer_disable_combo {
             bindings = <&to 0>;
             key-positions = <55 56>;
-            layers = <3>;
+            layers = <4>;
         };
     };
 
     behaviors {
-        prepinak_0: prepinak_0 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PREPINAK_0";
-            bindings = <&kp LS(N0)>, <&kp N0>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        prepinak_1: prepinak_1 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PREPINAK_1";
-            bindings = <&kp LS(N1)>, <&kp N1>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        prepinak_2: prepinak_2 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PREPINAK_2";
-            bindings = <&kp LS(N2)>, <&kp N2>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        prepinak_3: prepinak_3 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PREPINAK_3";
-            bindings = <&kp LS(N3)>, <&kp N3>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        prepinak_4: prepinak_4 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PREPINAK_4";
-            bindings = <&kp LS(N4)>, <&kp N4>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        prepinak_5: prepinak_5 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PREPINAK_5";
-            bindings = <&kp LS(N5)>, <&kp N5>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        prepinak_6: prepinak_6 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PREPINAK_6";
-            bindings = <&kp LS(NUMBER_6)>, <&kp N6>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        prepinak_7: prepinak_7 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PREPINAK_7";
-            bindings = <&kp LS(N7)>, <&kp N7>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        prepinak_8: prepinak_8 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PREPINAK_8";
-            bindings = <&kp LS(N8)>, <&kp N8>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        prepinak_9: prepinak_9 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PREPINAK_9";
-            bindings = <&kp LS(N9)>, <&kp N9>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         sticky_tap: sticky_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "STICKY_TAP";
@@ -161,6 +65,50 @@
             flavor = "hold-preferred";
             hold-while-undecided-linger;
         };
+
+        lang_switch: lang_switch {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LANG_SWITCH";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI>, <&kp LG(SPACE)>;
+        };
+
+        bt_hold: bt_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BT_HOLD";
+            bindings = <&bt>, <&none>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <3000>;
+            flavor = "tap-preferred";
+        };
+
+        plus_minus_mod_morph: plus_minus_mod_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PLUS_MINUS_MOD_MORPH";
+            bindings = <&kp PLUS>, <&kp MINUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mul_div_mod_morph: mul_div_mod_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MUL_DIV_MOD_MORPH";
+            bindings = <&kp ASTERISK>, <&kp SLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+
+    macros {
+        layer_tap_via_main: layer_tap_via_main {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&to 0 &macro_param_1to1 &macro_param_2to2 &hold_tap_layer MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
+            label = "LAYER_TAP_VIA_MAIN";
+        };
     };
 
     keymap {
@@ -168,23 +116,35 @@
 
         main_layer {
             bindings = <
-&kp ESC       &prepinak_1  &prepinak_2  &prepinak_3       &prepinak_4                        &prepinak_5                                       &prepinak_6          &prepinak_7   &prepinak_8    &prepinak_9  &prepinak_0  &kp MINUS
-&kp GRAVE     &kp Q        &kp W        &kp E             &kp R                              &kp T                                             &kp Y                &kp U         &kp I          &kp O        &kp P        &kp EQUAL
-&kp TAB       &kp A        &kp S        &kp D             &kp F                              &kp G        &none             &none              &kp H                &kp J         &kp K          &kp L        &kp SEMI     &kp SQT
-&kp LEFT_WIN  &kp Z        &kp X        &kp C             &kp V                              &kp B        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp N                &kp M         &kp COMMA      &kp DOT      &kp FSLH     &kp BACKSLASH
-                                        &kp LEFT_CONTROL  &sticky_tap LEFT_SHIFT LEFT_SHIFT  &kp ENTER    &kp BACKSPACE     &kp SPACE          &hold_tap_layer 1 1  &kp LEFT_ALT  &kp LG(SPACE)
+&kp ESC       &none  &none  &kp ESC           &none                              &none                                                     &none                &none      &kp MINUS  &none    &none     &none
+&kp GRAVE     &kp Q  &kp W  &kp E             &kp R                              &kp T                                                     &kp Y                &kp U      &kp I      &kp O    &kp P     &kp EQUAL
+&kp TAB       &kp A  &kp S  &kp D             &kp F                              &kp G                &none             &none              &kp H                &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&lang_switch  &kp Z  &kp X  &kp C             &kp V                              &kp B                &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp N                &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
+                            &kp LEFT_CONTROL  &sticky_tap LEFT_SHIFT LEFT_SHIFT  &hold_tap_layer 1 1  &kp BACKSPACE     &kp SPACE          &hold_tap_layer 2 2  &kp ENTER  &kp LALT
             >;
 
             label = "Main";
         };
 
+        num_layer {
+            bindings = <
+&to 0         &trans      &trans      &to 0       &trans      &trans                        &trans                   &trans      &trans      &trans      &trans      &trans
+&kp ESC       &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                        &kp F6                   &kp F7      &kp F8      &kp F9      &kp F10     &kp GRAVE
+&kp TAB       &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &trans   &trans   &kp N6                   &kp N7      &kp N8      &kp N9      &kp N0      &plus_minus_mod_morph
+&lang_switch  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp F11  &kp F12  &kp LS(N6)               &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &mul_div_mod_morph
+                                      &trans      &trans      &to 0       &trans   &trans   &layer_tap_via_main 2 2  &trans      &trans
+            >;
+
+            label = "Num";
+        };
+
         motion_layer {
             bindings = <
-&to 0          &kp F1                  &kp F2                  &kp F3                   &kp F4                   &kp F5                                        &kp F6        &kp F7    &kp F8         &kp F9       &kp F10    &kp F11
-&kp LG(PG_UP)  &kp LG(LA(LEFT_ARROW))  &kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &kp LG(LA(RIGHT_ARROW))  &kp C_BRIGHTNESS_INC                          &kp C_VOL_UP  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp F12
-&kp LG(PG_DN)  &kp LC(LA(LEFT))        &kp LC(LA(LS(LEFT)))    &kp LC(LA(LS(RIGHT)))    &kp LC(LA(RIGHT))        &kp C_BRIGHTNESS_DEC  &none       &none       &kp C_VOL_DN  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp C_SLEEP
-&trans         &kp LG(LEFT)            &kp LG(DOWN_ARROW)      &kp LG(UP_ARROW)         &kp LG(RIGHT)            &kp C_PLAY_PAUSE      &kp C_PREV  &kp C_NEXT  &kp C_MUTE    &kp N0    &kp LC(E)      &kp LC(Y)    &kp DLLR   &kp C_AL_LOCK
-                                                               &trans                   &trans                   &trans                &trans      &trans      &to 0         &trans    &trans
+&to 0          &trans                  &trans                  &to 0                    &trans                   &trans                                           &trans        &trans    &trans         &trans       &trans     &trans
+&kp LG(PG_UP)  &kp LG(LA(LEFT_ARROW))  &kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &kp LG(LA(RIGHT_ARROW))  &kp C_BRIGHTNESS_INC                             &kp C_VOL_UP  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp F12
+&kp LG(PG_DN)  &kp LC(LA(LEFT))        &kp LC(LA(LS(LEFT)))    &kp LC(LA(LS(RIGHT)))    &kp LC(LA(RIGHT))        &kp C_BRIGHTNESS_DEC     &none       &none       &kp C_VOL_DN  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp C_SLEEP
+&trans         &kp LG(LEFT)            &kp LG(DOWN_ARROW)      &kp LG(UP_ARROW)         &kp LG(RIGHT)            &kp C_PLAY_PAUSE         &kp C_PREV  &kp C_NEXT  &kp C_MUTE    &kp N0    &kp LC(E)      &kp LC(Y)    &kp DLLR   &kp C_AL_LOCK
+                                                               &trans                   &trans                   &layer_tap_via_main 1 1  &trans      &trans      &to 0         &trans    &trans
             >;
 
             label = "Motion";
@@ -192,11 +152,11 @@
 
         misc_layer {
             bindings = <
-&to 0      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                   &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_N9   &kp KP_PLUS   &none
-&kp TAB    &sys_reset    &bootloader   &bt BT_CLR    &none         &kp SCROLLLOCK                                 &kp KP_NUMLOCK   &kp KP_N4        &kp KP_N5        &kp KP_N6   &kp KP_PLUS   &kp KP_DOT
-&kp CAPS   &none         &none         &none         &none         &kp SYSREQ       &none           &none         &kp KP_DIVIDE    &kp KP_N1        &kp KP_N2        &kp KP_N3   &kp KP_ENTER  &kp ENTER
-&kp LSHFT  &none         &none         &none         &none         &kp PAUSE_BREAK  &out OUT_USB    &out OUT_BLE  &kp KP_MULTIPLY  &kp KP_N0        &kp KP_N0        &kp KP_DOT  &kp KP_ENTER  &kp RSHFT
-                                       &kp LCTRL     &kp LGUI      &kp LALT         &studio_unlock  &kp SPACE     &kp RALT         &kp RGUI         &kp RCTRL
+&to 0      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                   &none            &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_PLUS   &none
+&kp TAB    &sys_reset    &bootloader   &none         &none         &kp SCROLLLOCK                                 &kp KP_NUMLOCK   &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_PLUS   &kp KP_DOT
+&kp CAPS   &none         &none         &none         &none         &kp SYSREQ       &none           &none         &kp KP_DIVIDE    &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp KP_ENTER  &kp ENTER
+&kp LSHFT  &none         &none         &none         &none         &kp PAUSE_BREAK  &out OUT_USB    &out OUT_BLE  &kp KP_MULTIPLY  &kp KP_N0  &kp KP_N0  &kp KP_DOT  &kp KP_ENTER  &kp RSHFT
+                                       &kp LCTRL     &kp LGUI      &kp LALT         &studio_unlock  &kp SPACE     &kp RALT         &kp RGUI   &kp RCTRL
             >;
 
             label = "Misc";
@@ -215,4 +175,3 @@
         };
     };
 };
-
