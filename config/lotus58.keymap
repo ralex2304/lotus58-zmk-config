@@ -18,223 +18,7 @@
         game_layer_disable_combo {
             bindings = <&to 0>;
             key-positions = <55 56>;
-            layers = <4>;
-        };
-
-        motion_tmux_create_left_combo {
-            bindings = <&leader_key_macro LC(S) LS(LEFT_BRACKET)>;
-            key-positions = <13 33>;
-            layers = <2>;
-        };
-
-        motion_tmux_create_down_combo {
-            bindings = <&leader_key_macro LC(S) LS(SQT)>;
-            key-positions = <13 34>;
-            layers = <2>;
-        };
-
-        motion_tmux_create_up_combo {
-            bindings = <&leader_key_macro LC(S) Z>;
-            key-positions = <13 35>;
-            layers = <2>;
-        };
-
-        motion_tmux_create_right_combo {
-            bindings = <&leader_key_macro LC(S) LS(N5)>;
-            key-positions = <13 36>;
-            layers = <2>;
-        };
-
-        motion_vim_scroll_left_combo {
-            bindings = <&kp N0>;
-            key-positions = <14 33>;
-            layers = <2>;
-        };
-
-        motion_vim_scroll_down_combo {
-            bindings = <&kp LC(E)>;
-            key-positions = <14 34>;
-            layers = <2>;
-        };
-
-        motion_vim_scroll_up_combo {
-            bindings = <&kp LC(Y)>;
-            key-positions = <14 35>;
-            layers = <2>;
-        };
-
-        motion_vim_scroll_right_combo {
-            bindings = <&kp DLLR>;
-            key-positions = <14 36>;
-            layers = <2>;
-        };
-
-        motion_vim_resize_panes_left_combo {
-            bindings = <&leader_key_macro LC(W) LS(COMMA)>;
-            key-positions = <15 33>;
-            layers = <2>;
-        };
-
-        motion_vim_resize_panes_down_combo {
-            bindings = <&leader_key_macro LS(W) MINUS>;
-            key-positions = <15 34>;
-            layers = <2>;
-        };
-
-        motion_vim_resize_panes_up_combo {
-            bindings = <&leader_key_macro LC(W) LS(EQUAL)>;
-            key-positions = <15 35>;
-            layers = <2>;
-        };
-
-        motion_vim_resize_panes_right_combo {
-            bindings = <&leader_key_macro LC(W) LS(DOT)>;
-            key-positions = <15 36>;
-            layers = <2>;
-        };
-
-        motion_play_left_combo {
-            bindings = <&kp C_PREV>;
-            key-positions = <17 33>;
-            layers = <2>;
-        };
-
-        motion_play_down_combo {
-            bindings = <&kp C_PLAY_PAUSE>;
-            key-positions = <17 34>;
-            layers = <2>;
-        };
-
-        motion_play_up_combo {
-            bindings = <&kp C_PLAY_PAUSE>;
-            key-positions = <17 35>;
-            layers = <2>;
-        };
-
-        motion_play_right_combo {
-            bindings = <&kp C_NEXT>;
-            key-positions = <17 36>;
-            layers = <2>;
-        };
-
-        motion_disp_mv_left_combo {
-            bindings = <&kp LA(LG(LEFT))>;
-            key-positions = <25 33>;
-            layers = <2>;
-        };
-
-        motion_disp_mv_down_combo {
-            bindings = <&kp LG(LS(LEFT))>;
-            key-positions = <25 34>;
-            layers = <2>;
-        };
-
-        motion_disp_mv_up_combo {
-            bindings = <&kp LG(LS(RIGHT))>;
-            key-positions = <25 35>;
-            layers = <2>;
-        };
-
-        motion_disp_mv_right_combo {
-            bindings = <&kp LG(LS(RIGHT))>;
-            key-positions = <25 36>;
-            layers = <2>;
-        };
-
-        motion_desktop_mv_left_combo {
-            bindings = <&kp LA(LC(LEFT))>;
-            key-positions = <26 33>;
-            layers = <2>;
-        };
-
-        motion_desktop_mv_down_combo {
-            bindings = <&kp LS(LA(LC(LEFT)))>;
-            key-positions = <26 34>;
-            layers = <2>;
-        };
-
-        motion_desktop_mv_up_combo {
-            bindings = <&kp LS(LA(LC(RIGHT)))>;
-            key-positions = <26 35>;
-            layers = <2>;
-        };
-
-        motion_desktop_mv_right_combo {
-            bindings = <&kp LA(LC(RIGHT))>;
-            key-positions = <26 36>;
-            layers = <2>;
-        };
-
-        motion_window_left_combo {
-            bindings = <&kp LG(LEFT)>;
-            key-positions = <27 33>;
-            layers = <2>;
-        };
-
-        motion_window_down_combo {
-            bindings = <&kp LG(DOWN)>;
-            key-positions = <27 34>;
-            layers = <2>;
-        };
-
-        motion_window_up_combo {
-            bindings = <&kp LG(UP)>;
-            key-positions = <27 35>;
-            layers = <2>;
-        };
-
-        motion_window_right_combo {
-            bindings = <&kp LG(RIGHT)>;
-            key-positions = <27 36>;
-            layers = <2>;
-        };
-
-        motion_sw_window_left_combo {
-            bindings = <&kp LA(LS(TAB))>;
-            key-positions = <28 33>;
-            layers = <2>;
-        };
-
-        motion_sw_window_down_combo {
-            bindings = <&kp LC(LS(TAB))>;
-            key-positions = <28 34>;
-            layers = <2>;
-        };
-
-        motion_sw_window_up_combo {
-            bindings = <&kp LC(TAB)>;
-            key-positions = <28 35>;
-            layers = <2>;
-        };
-
-        motion_sw_window_right_combo {
-            bindings = <&kp LA(TAB)>;
-            key-positions = <28 36>;
-            layers = <2>;
-        };
-
-        motion_sound_left_combo {
-            bindings = <&kp C_VOL_DN>;
-            key-positions = <29 33>;
-            layers = <2>;
-        };
-
-        motion_sound_down_combo {
-            bindings = <&kp C_MUTE>;
-            key-positions = <29 34>;
-            layers = <2>;
-        };
-
-        motion_sound_up_combo {
-            bindings = <&kp C_MUTE>;
-            key-positions = <29 35>;
-            layers = <2>;
-        };
-
-        motion_sound_right_combo {
-            bindings = <&kp C_VOL_UP>;
-            key-positions = <29 36>;
-            layers = <2>;
+            layers = <7>;
         };
     };
 
@@ -280,15 +64,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        motion_mod_desktop_pgup: motion_mod_desktop_pgup {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MOTION_MOD_DESKTOP_PGUP";
-            bindings = <&kp LG(PG_UP)>, <&kp LG(PG_DN)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         motion_mod_brightness: motion_mod_brightness {
             compatible = "zmk,behavior-mod-morph";
             label = "MOTION_MOD_BRIGHTNESS";
@@ -326,8 +101,8 @@
         num_layer {
             bindings = <
 &trans                 &trans      &trans      &trans      &trans      &trans                         &trans      &trans      &trans      &trans      &trans      &trans
-&plus_minus_mod_morph  &kp N6      &kp N7      &kp N8      &kp N9      &kp N0                         &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &none
-&mul_div_mod_morph     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &trans     &trans  &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &none
+&plus_minus_mod_morph  &kp N6      &kp N7      &kp N8      &kp N9      &kp N0                         &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &kp F11
+&mul_div_mod_morph     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &trans     &trans  &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F12
 &kp KP_DOT             &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp ENTER  &none   &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &none
                                                &trans      &trans      &trans      &trans     &trans  &trans      &trans      &trans
             >;
@@ -337,14 +112,47 @@
 
         motion_layer {
             bindings = <
-&trans                    &trans     &trans     &trans     &trans     &trans                                                  &trans  &trans    &trans         &trans       &trans     &trans
-&trans                    &none      &none      &none      &none      &none                                                   &none   &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &none
-&motion_mod_desktop_pgup  &none      &none      &none      &none      &none                   &none              &none        &none   &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &none
-&trans                    &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &motion_mod_brightness  &kp C_AL_LOCK      &kp C_SLEEP  &none   &kp H     &kp J          &kp K        &kp L      &none
-                                                &trans     &trans     &lt 1 LC(DELETE)        &kp LC(BACKSPACE)  &trans       &trans  &trans    &trans
+&trans  &trans         &trans         &trans         &trans         &trans                                                  &trans  &trans    &trans         &trans       &trans     &trans
+&trans  &kp LS(LC(Z))  &kp LS(LC(X))  &kp LS(LC(C))  &kp LS(LC(V))  &none                                                   &none   &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &none
+&trans  &none          &mo 5          &mo 4          &mo 3          &none                   &none              &none        &none   &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &none
+&trans  &kp LC(Z)      &kp LC(X)      &kp LC(C)      &kp LC(V)      &motion_mod_brightness  &kp C_AL_LOCK      &kp C_SLEEP  &none   &kp H     &kp J          &kp K        &kp L      &none
+                                      &trans         &trans         &lt 1 LC(DELETE)        &kp LC(BACKSPACE)  &trans       &trans  &trans    &trans
             >;
 
             label = "Motion";
+        };
+
+        cli_layer {
+            label = "CLI";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans                                &trans                             &leader_key_macro LC(S) X      &trans                             &trans                              &trans
+&trans  &none   &none   &none   &none   &none                   &leader_key_macro LC(S) LS(SQT)       &kp N0                             &kp LC(E)                      &kp LC(Y)                          &kp LS(DLLR)                        &leader_key_macro LC(S) LS(N5)
+&trans  &none   &none   &none   &none   &none   &none   &none   &leader_key_macro LC(S) Z             &kp LC(H)                          &kp LC(J)                      &kp LC(K)                          &kp LC(L)                           &leader_key_macro G T
+&trans  &none   &none   &none   &none   &none   &none   &none   &leader_key_macro LC(S) LEFT_BRACKET  &leader_key_macro LC(W) LS(COMMA)  &leader_key_macro LC(W) MINUS  &leader_key_macro LC(W) LS(EQUAL)  &leader_key_macro LC(W) LS(PERIOD)  &leader_key_macro G LS(T)
+                        &trans  &trans  &trans  &trans  &trans  &trans                                &trans                             &trans
+            >;
+        };
+
+        windows_layer {
+            label = "Win";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans             &trans                  &kp LA(F4)                  &trans                       &trans                   &trans
+&trans  &none   &none   &none   &none   &none                   &kp LG(PAGE_DOWN)  &kp LG(LEFT_ARROW)      &kp LG(DOWN_ARROW)          &kp LG(UP_ARROW)             &kp LG(RIGHT_ARROW)      &kp LG(PAGE_UP)
+&trans  &none   &none   &none   &none   &none   &none   &none   &kp LA(TAB)        &kp LA(LG(LEFT_ARROW))  &kp LG(LS(LEFT_ARROW))      &kp LG(LS(RIGHT_ARROW))      &kp LA(LG(RIGHT_ARROW))  &kp LC(TAB)
+&trans  &none   &none   &none   &none   &none   &none   &none   &kp LS(LA(TAB))    &kp LA(LC(LEFT_ARROW))  &kp LA(LC(LS(LEFT_ARROW)))  &kp LA(LC(LS(RIGHT_ARROW)))  &kp LA(LC(RIGHT_ARROW))  &kp LC(LS(TAB))
+                        &trans  &trans  &trans  &trans  &trans  &trans             &trans                  &trans
+            >;
+        };
+
+        media_layer {
+            label = "Media";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans           &trans        &trans            &trans            &trans        &trans
+&trans  &none   &none   &none   &none   &none                   &kp LC(F5)       &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_PLAY_PAUSE  &kp C_NEXT    &kp F12
+&trans  &none   &none   &none   &none   &none   &none   &none   &kp PRINTSCREEN  &kp C_VOL_DN  &kp K_MUTE        &kp K_MUTE        &kp C_VOL_UP  &kp LC(TAB)
+&trans  &none   &none   &none   &none   &none   &none   &none   &kp LG(RETURN)   &kp LC(T)     &kp LC(LS(T))     &kp F5            &kp LC(W)     &kp LC(LS(TAB))
+                        &trans  &trans  &trans  &trans  &trans  &trans           &trans        &trans
+            >;
         };
 
         misc_layer {
@@ -352,7 +160,7 @@
 &to 0      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                &none            &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_PLUS   &none
 &kp TAB    &out OUT_BLE  &out OUT_USB  &sys_reset    &bootloader   &kp SCROLLLOCK                              &kp KP_NUMLOCK   &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_PLUS   &kp KP_DOT
 &kp CAPS   &none         &none         &none         &none         &kp SYSREQ       &none      &none           &kp KP_DIVIDE    &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp KP_ENTER  &kp ENTER
-&kp LSHFT  &none         &none         &none         &none         &kp PAUSE_BREAK  &to 4      &studio_unlock  &kp KP_MULTIPLY  &kp KP_N0  &kp KP_N0  &kp KP_DOT  &kp KP_ENTER  &kp RSHFT
+&kp LSHFT  &none         &none         &none         &none         &kp PAUSE_BREAK  &to 7      &studio_unlock  &kp KP_MULTIPLY  &kp KP_N0  &kp KP_N0  &kp KP_DOT  &kp KP_ENTER  &kp RSHFT
                                        &kp LCTRL     &kp LGUI      &kp LALT         &kp SPACE  &kp SPACE       &kp RALT         &kp RGUI   &kp RCTRL
             >;
 
@@ -377,7 +185,7 @@
 
         misc_layer {
             if-layers = <1 2>;
-            then-layer = <3>;
+            then-layer = <6>;
         };
     };
 };
